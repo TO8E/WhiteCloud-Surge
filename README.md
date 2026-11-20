@@ -19,12 +19,21 @@
 | `WhiteCloud.sgmodule` | Surge 模块：脚本规则 + MITM 域名 |
 | `whitecloud_unlock.js` | 响应改写脚本（RC 客户信息 + 自有后端字段） |
 
+## 仓库
+
+- 仓库：<https://github.com/TO8E/WhiteCloud-Surge>
+- 模块（raw）：<https://raw.githubusercontent.com/TO8E/WhiteCloud-Surge/main/WhiteCloud.sgmodule>
+- 脚本（raw）：<https://raw.githubusercontent.com/TO8E/WhiteCloud-Surge/main/whitecloud_unlock.js>
+- jsDelivr 镜像（raw 不通时）：<https://cdn.jsdelivr.net/gh/TO8E/WhiteCloud-Surge@main/WhiteCloud.sgmodule>
+
 ## 安装
 
-1. Surge → 首页 → 模块 → 安装本地模块，选 `WhiteCloud.sgmodule`
+1. Surge → 首页 → 模块 → 从 URL 安装，粘贴模块 raw 链接：
+   `https://raw.githubusercontent.com/TO8E/WhiteCloud-Surge/main/WhiteCloud.sgmodule`
+   （raw 不通就用 jsDelivr 镜像：`https://cdn.jsdelivr.net/gh/TO8E/WhiteCloud-Surge@main/WhiteCloud.sgmodule`）
 2. Surge → 设置 → MITM → 生成并安装证书 → 到 iOS 设置里「通用 → 关于本机 → 证书信任设置」把 Surge 证书打开
-3. 把 `whitecloud_unlock.js` 放进 Surge 脚本目录（iCloud / Files 里选路径，模块里的 `script-path` 指向它）
-4. MITM 打开，全局代理或规则模式都行
+3. MITM 开关打开，全局代理或规则模式都行
+4. 模块里 `script-path` 已指向远端脚本，不用手动放文件
 5. 杀掉白云天气 → 重开
 
 ## 验证
